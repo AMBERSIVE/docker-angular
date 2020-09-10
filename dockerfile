@@ -20,7 +20,8 @@ RUN apt-get install -y nodejs
 RUN mkdir -p /var/log/supervisor
 COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-# Install php extentions
+# NGINX
+COPY config/nginx-site.conf /etc/nginx/sites-available/default
 
 # Copy scripts
 COPY scripts /scripts
