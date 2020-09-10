@@ -1,0 +1,9 @@
+version: "3.1"
+services:
+  dot-client:
+    container_name: angular
+    image: ambersive/angular:latest
+    ports:
+      - "8181:80"
+    volumes:
+      - ./dist:/var/www/html

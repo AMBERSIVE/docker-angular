@@ -1,0 +1,11 @@
+version: "3.1"
+services:
+  dot-client:
+    container_name: angular-docker
+    build:
+      context: ./
+      dockerfile: dockerfile
+    ports:
+      - "8181:80"
+    volumes:
+      - ./test:/var/www/html
